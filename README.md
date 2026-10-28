@@ -74,17 +74,3 @@ A primeira versão será desenvolvida e testada num ambiente industrial simulado
 
 A integração com equipamentos industriais reais poderá ser considerada numa fase futura, após a implementação e validação dos mecanismos de segurança necessários.
 
-## Tecnologias Previstas
-
-- **Frontend:** React e Tailwind CSS.
-- **Backend:** Node.js e Express.
-- **Base de dados:** MySQL.
-- **Inteligência artificial:** modelos locais ou serviços externos.
-- **Automação:** motor de regras próprio, com possibilidade de integração futura com o n8n.
-- **Controlo de versões:** Git e GitHub.
-
-*As tecnologias poderão ser ajustadas durante o desenvolvimento.*
-
-## Resultado Esperado
-
-Desenvolver uma plataforma modular que centralize a gestão industrial e a cibersegurança, facilite a automação de processos e utilize a inteligência artificial para apoiar decisões, contribuindo para a eficiência operacional e a modernização tecnológica das empresas angolanas.
