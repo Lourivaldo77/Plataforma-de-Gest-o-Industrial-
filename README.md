@@ -67,10 +67,3 @@ A plataforma pretende facilitar a gestão de equipamentos, o acompanhamento das 
 | RN09   | A inteligência artificial deve respeitar as permissões de acesso e não pode executar acções críticas autonomamente.                      |
 | RN10   | As principais operações e execuções de automação devem ficar registadas para auditoria.                                                  |
 | RN11   | Na primeira versão, as funcionalidades industriais devem ser testadas num ambiente simulado, sem controlo directo de equipamentos reais. |
-
-## Âmbito da Primeira Versão
-
-A primeira versão será desenvolvida e testada num ambiente industrial simulado. O foco estará na gestão de equipamentos e manutenção, na monitorização de eventos de cibersegurança, na automação de tarefas e na integração de inteligência artificial.
-
-A integração com equipamentos industriais reais poderá ser considerada numa fase futura, após a implementação e validação dos mecanismos de segurança necessários.
-
