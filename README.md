@@ -1,4 +1,4 @@
-# Plataforma de Gestão Industrial, Cibersegurança, Automação e Inteligência Artificial
+# Plataforma de Gestão Industrial
 
 ## &#x20;Descrição do Projecto
 
