@@ -1,69 +1,16 @@
-# Plataforma de Gestão Industrial
+# React + Vite
 
-## &#x20;Descrição do Projecto
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Este projecto consiste no desenvolvimento de uma plataforma que integra a gestão industrial, a cibersegurança, a automação de processos e a inteligência artificial num único sistema.
+Currently, two official plugins are available:
 
-A plataforma pretende facilitar a gestão de equipamentos, o acompanhamento das actividades de manutenção, a monitorização de eventos de segurança e a automatização de tarefas, utilizando a inteligência artificial para apoiar a análise de informações e a tomada de decisões.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Objectivos
+## React Compiler
 
-- Melhorar a gestão e o acompanhamento dos equipamentos industriais.
-- Facilitar a identificação e o acompanhamento de incidentes de cibersegurança.
-- Automatizar tarefas repetitivas através de regras predefinidas.
-- Utilizar inteligência artificial para analisar informações e apoiar decisões.
-- Centralizar informações operacionais e de segurança numa única plataforma.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Benefícios para o Mercado Angolano
+## Expanding the ESLint configuration
 
-- **Eficiência operacional:** melhorar a organização das actividades de manutenção e reduzir falhas.
-- **Segurança digital:** facilitar a monitorização de eventos e a gestão de incidentes.
-- **Redução de custos:** diminuir o trabalho manual e melhorar a utilização dos recursos.
-- **Apoio à decisão:** fornecer informações úteis para decisões mais rápidas e fundamentadas.
-- **Modernização industrial:** incentivar a adopção de tecnologias digitais nos sectores do petróleo e gás, da energia, da mineração e da indústria transformadora em Angola.
-
-## Requisitos Funcionais
-
-| Código | Requisito                                                                                |
-| ------ | ---------------------------------------------------------------------------------------- |
-| RF01   | Permitir o registo, a autenticação e a gestão de utilizadores.                           |
-| RF02   | Controlar o acesso às funcionalidades de acordo com as permissões.                       |
-| RF03   | Permitir o registo e a gestão de equipamentos industriais.                               |
-| RF04   | Permitir a gestão de tarefas e planos de manutenção.                                     |
-| RF05   | Recolher, consultar e organizar eventos de cibersegurança.                               |
-| RF06   | Permitir a gestão de alertas e incidentes de segurança.                                  |
-| RF07   | Permitir a criação e execução de automações baseadas em regras.                          |
-| RF08   | Utilizar inteligência artificial para analisar informações e apoiar decisões.            |
-| RF09   | Apresentar indicadores operacionais e de segurança num painel de controlo (*dashboard*). |
-| RF10   | Registar as principais acções dos utilizadores e das automações para auditoria.          |
-
-## Requisitos Não Funcionais
-
-| Código | Requisito                                                                                            |
-| ------ | ---------------------------------------------------------------------------------------------------- |
-| RNF01  | Proteger os dados e as credenciais dos utilizadores.                                                 |
-| RNF02  | Garantir que cada utilizador acede apenas às funcionalidades autorizadas.                            |
-| RNF03  | Disponibilizar uma interface simples, intuitiva e adaptável a diferentes ecrãs.                      |
-| RNF04  | Garantir um bom desempenho nas operações comuns.                                                     |
-| RNF05  | Assegurar a integridade e a fiabilidade dos dados.                                                   |
-| RNF06  | Utilizar uma arquitectura modular que facilite a manutenção e a expansão.                            |
-| RNF07  | Ser adequado a computadores com recursos limitados.                                                  |
-| RNF08  | Permitir o funcionamento das funcionalidades essenciais quando o serviço de IA estiver indisponível. |
-| RNF09  | Disponibilizar registos de erros e mecanismos de cópia de segurança e recuperação.                   |
-| RNF10  | Impedir acções não autorizadas e proteger os sistemas industriais contra intervenções indevidas.     |
-
-## Regras de Negócio
-
-| Código | Regra                                                                                                                                    |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| RN01   | Cada utilizador deve possuir credenciais próprias para aceder ao sistema.                                                                |
-| RN02   | Cada utilizador só pode executar operações permitidas pelo seu perfil de acesso.                                                         |
-| RN03   | Cada equipamento deve possuir um identificador único.                                                                                    |
-| RN04   | As tarefas de manutenção devem estar associadas aos respectivos equipamentos.                                                            |
-| RN05   | Os eventos de segurança devem ser analisados antes de serem classificados como incidentes confirmados.                                   |
-| RN06   | Os alertas devem apresentar informações que permitam a sua análise e acompanhamento.                                                     |
-| RN07   | As automações só podem executar acções previamente definidas e autorizadas.                                                              |
-| RN08   | As acções críticas devem exigir aprovação humana antes da execução.                                                                      |
-| RN09   | A inteligência artificial deve respeitar as permissões de acesso e não pode executar acções críticas autonomamente.                      |
-| RN10   | As principais operações e execuções de automação devem ficar registadas para auditoria.                                                  |
-| RN11   | Na primeira versão, as funcionalidades industriais devem ser testadas num ambiente simulado, sem controlo directo de equipamentos reais. |
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
