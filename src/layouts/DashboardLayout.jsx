@@ -8,9 +8,14 @@ function DashboardLayout() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+    try {
+      const session = JSON.parse(localStorage.getItem("authSession") || "null");
 
-    if (!isAuthenticated) {
+      if (!session || !session.isAuthenticated) {
+        navigate("/login", { replace: true });
+      }
+    } catch {
+      localStorage.removeItem("authSession");
       navigate("/login", { replace: true });
     }
   }, [navigate]);

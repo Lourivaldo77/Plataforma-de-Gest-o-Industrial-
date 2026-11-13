@@ -2,23 +2,56 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
+const DEMO_CREDENTIALS = {
+  email: "admin@empresa.ao",
+  password: "admin123",
+};
+
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  function handleLogin(e) {
-    e.preventDefault();
-    localStorage.setItem("isAuthenticated", "true");
+  function handleChange(event) {
+    const { id, value } = event.target;
+
+    setFormData((current) => ({ ...current, [id]: value }));
+
+    if (error) {
+      setError("");
+    }
+  }
+
+  function handleLogin(event) {
+    event.preventDefault();
+
+    const normalizedEmail = formData.email.trim().toLowerCase();
+
+    if (
+      normalizedEmail !== DEMO_CREDENTIALS.email ||
+      formData.password !== DEMO_CREDENTIALS.password
+    ) {
+      setError("Credenciais inválidas. Use admin@empresa.ao / admin123.");
+      return;
+    }
+
+    const session = {
+      email: normalizedEmail,
+      name: "Administrador",
+      role: "admin",
+      isAuthenticated: true,
+      lastLogin: new Date().toISOString(),
+    };
+
+    localStorage.setItem("authSession", JSON.stringify(session));
     navigate("/dashboard");
   }
 
   return (
     <div className="login-page">
-      {/* LADO ESQUERDO */}
       <section className="login-banner">
-        <div className="brand">
-
-        </div>
+        <div className="brand" />
 
         <div className="banner-content">
           <h1>
@@ -40,7 +73,6 @@ function Login() {
         <div className="banner-footer">ANGOLA • INDÚSTRIA • INOVAÇÃO</div>
       </section>
 
-      {/* LADO DIREITO */}
       <section className="login-area">
         <div className="login-card">
           <div className="card-header">
@@ -55,6 +87,8 @@ function Login() {
               <input
                 type="email"
                 id="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="usuario@empresa.ao"
                 required
               />
@@ -67,18 +101,26 @@ function Login() {
                 <input
                   type={showPassword ? "text" : "password"}
                   id="password"
+                  value={formData.password}
+                  onChange={handleChange}
                   placeholder="Introduza a sua palavra-passe"
                   required
                 />
 
                 <button
                   type="button"
-                  onClick={() => setShowPassword(!showPassword)}
+                  onClick={() => setShowPassword((current) => !current)}
                 >
                   {showPassword ? "Ocultar" : "Mostrar"}
                 </button>
               </div>
             </div>
+
+            {error ? (
+              <p className="login-error" role="alert">
+                {error}
+              </p>
+            ) : null}
 
             <div className="login-options">
               <label>
@@ -88,6 +130,10 @@ function Login() {
 
               <a href="#">Esqueceu a palavra-passe?</a>
             </div>
+
+            <p className="demo-credentials">
+              Demo: {DEMO_CREDENTIALS.email} / {DEMO_CREDENTIALS.password}
+            </p>
 
             <button type="submit" className="login-button">
               Entrar

@@ -180,6 +180,23 @@
 
 /* OPÇÕES */
 
+.login-error {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  background: rgba(200, 16, 46, 0.08);
+  color: #a30c25;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.demo-credentials {
+  margin: 0 0 18px;
+  color: #475569;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
 .login-options {
   display: flex;
   justify-content: space-between;

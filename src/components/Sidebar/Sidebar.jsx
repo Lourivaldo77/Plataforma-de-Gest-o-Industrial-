@@ -33,7 +33,7 @@ function Sidebar() {
   const navigate = useNavigate();
 
   function handleLogout() {
-    localStorage.removeItem("isAuthenticated");
+    localStorage.removeItem("authSession");
     navigate("/login", { replace: true });
   }
 

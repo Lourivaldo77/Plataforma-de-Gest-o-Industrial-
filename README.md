@@ -68,3 +68,32 @@ A plataforma pretende facilitar a gestão de equipamentos, o acompanhamento das 
 | RN10   | As principais operações e execuções de automação devem ficar registadas para auditoria.                                                  |
 | RN11   | Na primeira versão, as funcionalidades industriais devem ser testadas num ambiente simulado, sem controlo directo de equipamentos reais. |
 
+## Estrutura do projecto
+
+- `src/` - frontend em React/Vite
+- `backend/` - backend em Node.js com Express
+- `public/` - assets públicos
+- `Diagramas/` - diagramas e documentação visual
+
+## Backend Node.js
+
+A estrutura base do backend foi organizada em `backend/` para receber a API em Node.js:
+
+- `backend/src/app.js` - configuração da aplicação Express
+- `backend/src/server.js` - inicialização do servidor
+- `backend/src/routes/` - rotas da API
+- `backend/src/controllers/` - lógica dos endpoints
+- `backend/src/services/` - regras de negócio
+- `backend/src/middleware/` - middlewares
+- `backend/src/config/` - configuração e ambiente
+- `backend/src/utils/` - utilitários
+
+## Login fictício
+
+O login do frontend agora valida credenciais demo reais no navegador para evitar que qualquer input entre na plataforma. O utilizador de demonstração é:
+
+- Utilizador: `admin@empresa.ao`
+- Palavra-passe: `admin123`
+
+A autenticação real ainda não existe no backend, por isso esta é uma simulação local apenas para desenvolvimento do front-end e da estrutura do projecto.
+
